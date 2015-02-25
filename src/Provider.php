@@ -12,7 +12,9 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     protected function getAuthUrl($state)
     {
-        return $this->buildAuthUrlFromBase('https://login.mailchimp.com/oauth2/authorize', $state);
+        return $this->buildAuthUrlFromBase(
+            'https://login.mailchimp.com/oauth2/authorize', $state
+        );
     }
 
     /**
@@ -28,7 +30,8 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     protected function getUserByToken($token)
     {
-        $response = $this->getHttpClient()->get('https://login.mailchimp.com/oauth2/metadata', [
+        $response = $this->getHttpClient()->get(
+            'https://login.mailchimp.com/oauth2/metadata', [
             'headers' => [
                 'Accept'        => 'application/json',
                 'Authorization' => 'OAuth '.$token,
@@ -44,11 +47,9 @@ class Provider extends AbstractProvider implements ProviderInterface
     protected function mapUserToObject(array $user)
     {
         return (new User())->setRaw($user)->map([
-            'id'       => $user['login']['login_id'],
-            'nickname' => $user['login']['login_name'],
-            'name'     => null,
-            'email'    => $user['login']['login_email'],
-            'avatar'   => null,
+            'id' => $user['login']['login_id'],
+            'nickname' => $user['login']['login_name'], 'name' => null,
+            'email' => $user['login']['login_email'], 'avatar' => null,
         ]);
     }
 
@@ -57,6 +58,8 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     protected function getTokenFields($code)
     {
-        return array_merge(parent::getTokenFields($code), ['grant_type' => 'authorization_code']);
+        return array_merge(parent::getTokenFields($code), [
+            'grant_type' => 'authorization_code',
+        ]);
     }
 }
