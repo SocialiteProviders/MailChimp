@@ -1,5 +1,11 @@
 # MailChimp OAuth2 Provider for Laravel Socialite
 
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/SocialiteProviders/MailChimp.svg?style=flat-square)](https://scrutinizer-ci.com/g/SocialiteProviders/MailChimp/?branch=master)
+[![Latest Stable Version](https://img.shields.io/packagist/v/socialiteproviders/mailchimp.svg?style=flat-square)](https://packagist.org/packages/socialiteproviders/mailchimp)
+[![Total Downloads](https://img.shields.io/packagist/dt/socialiteproviders/mailchimp.svg?style=flat-square)](https://packagist.org/packages/socialiteproviders/mailchimp)
+[![Latest Unstable Version](https://img.shields.io/packagist/vpre/socialiteproviders/mailchimp.svg?style=flat-square)](https://packagist.org/packages/socialiteproviders/mailchimp)
+[![License](https://img.shields.io/packagist/l/socialiteproviders/mailchimp.svg?style=flat-square)](https://packagist.org/packages/socialiteproviders/mailchimp)
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Contents
