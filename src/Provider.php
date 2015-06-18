@@ -1,4 +1,5 @@
 <?php
+
 namespace SocialiteProviders\MailChimp;
 
 use Laravel\Socialite\Two\AbstractProvider;
@@ -33,12 +34,12 @@ class Provider extends AbstractProvider implements ProviderInterface
         $response = $this->getHttpClient()->get(
             'https://login.mailchimp.com/oauth2/metadata', [
             'headers' => [
-                'Accept'        => 'application/json',
+                'Accept' => 'application/json',
                 'Authorization' => 'OAuth '.$token,
             ],
         ]);
 
-        return json_decode($response->getBody(), true);
+        return json_decode($response->getBody()->getContents(), true);
     }
 
     /**

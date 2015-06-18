@@ -1,4 +1,5 @@
 <?php
+
 namespace SocialiteProviders\MailChimp;
 
 use SocialiteProviders\Manager\SocialiteWasCalled;
